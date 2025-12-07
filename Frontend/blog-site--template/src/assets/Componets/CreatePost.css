@@ -1,0 +1,19 @@
+.post_form{
+   width:50%;
+   border:1px solid grey;
+   padding:20px;
+}
+.post_form input, .post_form textarea,.post_form button{
+    width:100%;
+    margin:10px 0px;
+    padding:8px;
+}
+.post_form .file{
+    border:1px solid gray
+
+}
+.post_form button{
+    cursor:pointer;
+    background-color: green;
+    color:white;
+}

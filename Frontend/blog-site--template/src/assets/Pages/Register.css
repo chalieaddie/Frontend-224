@@ -1,0 +1,166 @@
+/* CENTER PAGE */
+.register-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f5f6fa;
+  padding: 20px;
+}
+
+/* CARD STYLE */
+.register-card {
+  width: 100%;
+  max-width: 380px;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* TITLES */
+.register-title {
+  font-size: 1.8rem;
+}
+
+.register-subtitle {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* ERROR MESSAGE */
+.register-error {
+  background: #ffdddd;
+  color: #cc0000;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+/* FORM */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.register-input-group label {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.register-input-group input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-size: 1rem;
+}
+
+/* BUTTON */
+.register-btn {
+  padding: 12px;
+  width: 100%;
+  background: #4a57ff;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.register-btn:hover {
+  background: #3c46d6;
+}
+
+/* FOOTER */
+.register-footer {
+  margin-top: 18px;
+  font-size: 0.9rem;
+}
+
+.register-link {
+  color: #4a57ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+}
+
+
+.signup_container{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+.signup_form{
+    border: 1px solid gray;
+    padding:20px;
+    border-radius: 10px;
+    width:30%;
+}
+
+.form_input{
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 2px;
+    width:100%;
+    border:1px solid rgb(216,213,213);
+}
+button{
+    width:100%;
+    padding:8px;
+    border-radius: 5px;
+    border: 1px solid rgb(216,213,213);
+}
+.signup_button{
+
+    background-color: rgb(17,80,227);
+    color:white;
+
+}
+.Login_button{
+    background-color: rgb(3,177,18);
+}
+
+.signup_button{
+    margin-top:8px;
+} */
