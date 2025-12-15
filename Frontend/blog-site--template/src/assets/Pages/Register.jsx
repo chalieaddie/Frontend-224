@@ -15,7 +15,7 @@ const Register = () => {
     e.preventDefault();
 
     axios
-      .post("http://localhost:3000/register", { username, email, password })
+      .post("https://frontend-224.onrender.com/register", { username, email, password })
       .then(() => navigate("/login"))
       .catch((err) => {
         console.log(err);

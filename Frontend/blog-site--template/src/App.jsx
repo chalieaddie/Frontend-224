@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/current_user", { withCredentials: true });
+        const res = await axios.get("https://frontend-224.onrender.com/current_user", { withCredentials: true });
         setUser(res.data); // { username, email }
       } catch (err) {
         console.log("No active session:", err);

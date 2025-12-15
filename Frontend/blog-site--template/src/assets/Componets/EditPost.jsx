@@ -26,7 +26,7 @@ const EditPost = () => {
     if (!user) return;
 
     axios
-      .get(`http://localhost:3000/getpostbyid/${id}`, { withCredentials: true })
+      .get(`https://frontend-224.onrender.com/getpostbyid/${id}`, { withCredentials: true })
       .then((res) => {
         const post = res.data;
 
@@ -72,7 +72,7 @@ const EditPost = () => {
     if (formData.file) data.append("file", formData.file);
 
     try {
-      await axios.put(`http://localhost:3000/editpost/${id}`, data, {
+      await axios.put(`https://frontend-224.onrender.com/editpost/${id}`, data, {
         withCredentials: true,
       });
       alert("Post updated successfully!");
@@ -88,7 +88,7 @@ const EditPost = () => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
 
     try {
-      await axios.delete(`http://localhost:3000/deletepost/${id}`, {
+      await axios.delete(`https://frontend-224.onrender.com/deletepost/${id}`, {
         withCredentials: true,
       });
       alert("Post deleted successfully!");
@@ -102,7 +102,7 @@ const EditPost = () => {
   // Logout handler
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/logout", { withCredentials: true });
+      await axios.get("https://frontend-224.onrender.com/logout", { withCredentials: true });
       navigate("/login");
     } catch (err) {
       console.log(err);

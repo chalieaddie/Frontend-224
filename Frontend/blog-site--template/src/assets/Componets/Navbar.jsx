@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/logout", { withCredentials: true });
+      await axios.get("https://frontend-224.onrender.com/logout", { withCredentials: true });
       setUser({}); // immediately clear user context
       navigate("/"); // redirect to home
     } catch (err) {
