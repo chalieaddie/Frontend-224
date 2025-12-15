@@ -24,8 +24,10 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin:"http://localhost:5173",
-    https://frontend-224.onrender.com,
+    origin: [
+      "http://localhost:5173",
+      "https://frontend-224.onrender.com",
+    ],
     credentials: true,
   })
 );
