@@ -27,6 +27,8 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://frontend-224.onrender.com",
+       "frontend-224.vercel.app",
+
     ],
     credentials: true,
   })
