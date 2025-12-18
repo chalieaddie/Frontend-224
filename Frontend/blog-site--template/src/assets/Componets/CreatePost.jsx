@@ -39,7 +39,7 @@ const CreatePost = () => {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("https://frontend-224.onrender.com/create", formData, {
+      const res = await axios.post("http://localhost:3000/create", formData, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       });
@@ -116,6 +116,3 @@ const CreatePost = () => {
 };
 
 export default CreatePost;
-
-
-

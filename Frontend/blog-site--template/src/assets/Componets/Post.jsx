@@ -13,7 +13,7 @@ const Post = () => {
   // Fetch single post
   useEffect(() => {
     axios
-      .get(`https://frontend-224.onrender.com/getpostbyid/${id}`)
+      .get(`http://localhost:3000/getpostbyid/${id}`)
       .then((res) => setPost(res.data))
       .catch((err) => console.log(err));
   }, [id]);
@@ -21,7 +21,7 @@ const Post = () => {
   // Delete post
   const handleDelete = async () => {
     try {
-      await axios.delete(`https://frontend-224.onrender.com/deletepost/${post._id}`, {
+      await axios.delete(`http://localhost:3000/deletepost/${post._id}`, {
         withCredentials: true,
       });
       navigate("/");
@@ -56,15 +56,6 @@ const Post = () => {
 };
 
 export default Post;
-
-
-
-
-
-
-
-
-
 
 
 

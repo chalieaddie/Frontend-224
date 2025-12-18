@@ -10,21 +10,22 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
-  const { setUser } = useContext(userContext);
+  const { setUser } = useContext(userContext); // to update context immediately
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const res = await axios.post(
-        "https://frontend-224.onrender.com/login",
+        "http://localhost:3000/login",
         { email, password },
         { withCredentials: true }
       );
 
       if (res.data.success) {
+        // Update context immediately
         setUser({ username: res.data.username, email });
-        navigate("/");
+        navigate("/"); // redirect to home
       } else {
         setError(res.data.message || "Login failed");
       }
@@ -35,61 +36,52 @@ const Login = () => {
   };
 
   return (
-    <div className="login-wrapper">
-      <div className="login-card">
+    <div className="Login_container">
+      <div className="Login_form">
+        <h2>Login</h2>
 
-        <h2 className="login-title">Welcome Back</h2>
-        <p className="login-subtitle">Login to continue</p>
+        {error && <p className="error-text">{error}</p>}
 
-        {error && <p className="login-error">{error}</p>}
-
-        <form onSubmit={handleSubmit} className="login-form">
-
-          <div className="login-input-group">
+        <form onSubmit={handleSubmit}>
+          <div>
             <label>Email</label>
             <input
               type="email"
-              placeholder="Enter your email"
+              className="Login_form_input"
+              placeholder="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
 
-          <div className="login-input-group">
+          <div>
             <label>Password</label>
             <input
               type="password"
-              placeholder="Enter your password"
+              className="Login_form_input"
+              placeholder="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
             />
           </div>
 
-          <button className="login-btn">Login</button>
+          <button className="Login_button">Login</button>
         </form>
 
-        <p className="login-footer">
-          Don't have an account?{" "}
-          <Link to="/register" className="login-link">Register</Link>
-        </p>
+        <br />
+
+        <p>Don't have an account?</p>
+        <Link to="/register">
+          <button className="signup_button">Register</button>
+        </Link>
       </div>
     </div>
   );
 };
 
 export default Login;
-
-
-
-
-
-
-
-
-
-
 
 
 
